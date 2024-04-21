@@ -24,6 +24,7 @@ class Model:
 
 
     def read_questions(self,f1, f2):
+        ''' Reads all the questions and separates them by level'''
         with open(f1, 'r') as f:
             questions = json.load(f)
         with open(f2, 'r') as f:
@@ -51,7 +52,7 @@ class Model:
    
 
     def get_question(self):
-        '''En funcio del level retorna una pregunta random de la llista'''
+        '''Depending on the current level, returns a random question from that level'''
         if self.current_level == 1:
            return random.choice(self.questions_level1)
         elif self.current_level == 2:
@@ -60,6 +61,7 @@ class Model:
            return random.choice(self.questions_level3)
 
     def get_levels(self):
+        '''Gets the amount of score from each level'''
         if self.score <= self.score_level2:
             level1 = self.score
             level2 = 0
@@ -74,9 +76,18 @@ class Model:
             level3 = self.score - (level1 + level2)
 
         return level1, level2, level3
+    
+    def get_score(self):
+        "Returns current score"
+        return self.score
+    
+    def get_level(self):
+        "Returns current level"
+        return self.current_level
+    
 
     def right_answer(self):
-        '''sumar tres a l'score i comprovar si hem de canviar de nivell'''
+        '''Sums 3 to the score and checks if we have to change the level'''
         self.score += 3
         if self.score >= self.score_level2:
             self.current_level = 2
@@ -84,7 +95,7 @@ class Model:
             self.current_level = 3    
 
     def wrong_answer(self):
-        '''restar 1 a l'score i comprovar si hem dde canviar de nivell'''
+        '''Subtracts 1 to the score and checks if we have to change the level'''
         self.score -= 1
         if self.score <= self.score_level3:
             self.current_level = 2
@@ -92,17 +103,15 @@ class Model:
             self.current_level = 1
         self.score = max(0,self.score)
 
-    def get_score(self):
-        return self.score
-    
-    def get_level(self):
-        return self.current_level
+
 
     def new_game(self):
+        "Restarts the score and level"
         self.score = 0
         self.current_level = 1
 
     def end_game(self):
+        "Chekcs if you have reach the end of the game"
         return self.score >= self.final_score
     
 
@@ -124,7 +133,7 @@ def new_game():
     st.session_state['next_question_disabled']=False
     next_question()
 
-# Inicialització de les variables de sessio
+# Inicialitzation of session variables
 if 'iniciat' not in st.session_state:
     st.session_state['iniciat']=True
     st.session_state['radio_disabled']=False
@@ -136,7 +145,7 @@ if 'iniciat' not in st.session_state:
 
 levels =['Level 1','Level 2','Level 3']
 
-### Titol
+### Title
 titol=f":blue[{st.session_state['model'].title}]"
 col1, mid, col2 = st.columns([1,1,20])
 with col1:
@@ -164,7 +173,7 @@ with col4:
         st.header('You are on '+levels[st.session_state['model'].get_level()-1])
 
 
-# columnes de preguntes i score
+# Score and questions columns
 col1, col2 = st.columns([4,1])
 
 with col1 :  
@@ -189,23 +198,19 @@ with col1 :
 
     st.button('next question',on_click=next_question,disabled=st.session_state['next_question_disabled'])
 
+# Stacked barplot
 with col2 :
     fig, ax = plt.subplots()
     l1,l2,l3 = st.session_state['model'].get_levels()
 
-    # Plot bars in stack manner
+
     ax.bar(' ', l1, color='g')
     ax.bar(' ', l2, bottom = l1, color='yellow')
     ax.bar(' ', l3, bottom = l1+l2, color='r')
-    ax.axis('off')  # Turn off all axes
+    ax.axis('off')  
     ax.set_yticks([30,60,90])
     st.pyplot(fig)
     st.button('new game',on_click=new_game)
-
-
-if st.session_state['model'].get_score()>10:
-    #st.balloons()
-    pass
 
 
 

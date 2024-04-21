@@ -1,0 +1,5 @@
+streamlit
+random
+json
+matplotlib.pyplot
+playsound

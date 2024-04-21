@@ -3,6 +3,8 @@ import random
 import json
 import matplotlib.pyplot as plt
 
+
+
 st.set_page_config( page_title='Human Rights',
                     layout="wide",
                     initial_sidebar_state="expanded")
@@ -14,27 +16,35 @@ class Model:
        self.title = 'Human Rights'
        self.current_level = 1
        self.score = 0
-       self.questions_level1, self.questions_level2, self.questions_level3 = self.read_questions('questions.json')
+       self.questions_level1, self.questions_level2, self.questions_level3 = self.read_questions('questions.json','human_rights.json')
        self.score_level1 = 0
        self.score_level2 = 30
        self.score_level3 = 60
        self.final_score = 90
 
-    def read_questions(self,f):
-        with open(f, 'r') as f:
-            file = json.load(f)
+
+    def read_questions(self,f1, f2):
+        with open(f1, 'r') as f:
+            questions = json.load(f)
+        with open(f2, 'r') as f:
+            articles = json.load(f)
+        
         level1 = []
         level2 = []
         level3 = []
-        for question in file:
+
+        for question in questions:
             if question[1] == 1:
                 question.remove(question[1])
+                question.append(articles[question[0]])
                 level1.append(question)
             elif question[1] == 2:
                 question.remove(question[1])
+                question.append(articles[question[0]])
                 level2.append(question)
             else:
                 question.remove(question[1])
+                question.append(articles[question[0]])
                 level3.append(question)
 
         return level1,level2,level3
@@ -84,6 +94,9 @@ class Model:
 
     def get_score(self):
         return self.score
+    
+    def get_level(self):
+        return self.current_level
 
     def new_game(self):
         self.score = 0
@@ -121,7 +134,7 @@ if 'iniciat' not in st.session_state:
     st.session_state['question'] = st.session_state['model'].get_question()
     st.session_state['key']=0
 
-levels =[':large_orange_circle:',':large_yellow_circle:',':large_green_circle:']
+levels =['Level 1','Level 2','Level 3']
 
 ### Titol
 titol=f":blue[{st.session_state['model'].title}]"
@@ -146,9 +159,9 @@ with col3:
 with col4:
     col5,col6 = st.columns([3,1])
     with col5:
-        st.header('Free and Equal')
+        st.header(st.session_state['question'][-1])
     with col6:
-        st.header('Score')
+        st.header('You are on '+levels[st.session_state['model'].get_level()-1])
 
 
 # columnes de preguntes i score
@@ -158,18 +171,19 @@ with col1 :
 
     st.subheader(st.session_state['question'][2])  
     answer = None
-    answer = st.radio(' ',st.session_state['question'][3:], index = None, disabled = st.session_state['radio_disabled'],on_change=radio_chosen, key=st.session_state['key'])    
+    answer = st.radio(' ',st.session_state['question'][3:6], index = None, disabled = st.session_state['radio_disabled'],on_change=radio_chosen, key=st.session_state['key'])    
     if answer :
-        selected_index = st.session_state['question'][3:].index(answer)
+        selected_index = st.session_state['question'][3:6].index(answer)
         if selected_index == st.session_state['question'][1]-1 :
-            st.subheader(":green[Correcte!!]")
+            st.subheader(":green[Right answer!!]")
             st.session_state['model'].right_answer()
             if st.session_state['model'].end_game():
                 st.balloons()
                 st.session_state['next_question_disabled']=True
            
         else:
-            st.subheader(':red: '+st.session_state['question'][st.session_state['question'][1]+2])
+            msg = f':red[{st.session_state["question"][st.session_state["question"][1]+2]}]'
+            st.subheader(msg)
             st.session_state['model'].wrong_answer()
         
 
@@ -181,13 +195,12 @@ with col2 :
 
     # Plot bars in stack manner
     ax.bar(' ', l1, color='g')
-    ax.bar(' ', l2, bottom = l1, color='orange')
+    ax.bar(' ', l2, bottom = l1, color='yellow')
     ax.bar(' ', l3, bottom = l1+l2, color='r')
     ax.axis('off')  # Turn off all axes
     ax.set_yticks([30,60,90])
     st.pyplot(fig)
     st.button('new game',on_click=new_game)
-
 
 
 if st.session_state['model'].get_score()>10:

@@ -2,9 +2,6 @@ import streamlit as st
 import random
 import json
 import matplotlib.pyplot as plt
-from playsound import playsound
-
-
 
 st.set_page_config( page_title='Human Rights',
                     layout="wide",
@@ -167,7 +164,6 @@ with col1 :
         if selected_index == st.session_state['question'][1]-1 :
             st.subheader(":green[Correcte!!]")
             st.session_state['model'].right_answer()
-            playsound('right.wav')
             if st.session_state['model'].end_game():
                 st.balloons()
                 st.session_state['next_question_disabled']=True
@@ -175,7 +171,6 @@ with col1 :
         else:
             st.subheader(':red: '+st.session_state['question'][st.session_state['question'][1]+2])
             st.session_state['model'].wrong_answer()
-            playsound('wrong.wav')
         
 
     st.button('next question',on_click=next_question,disabled=st.session_state['next_question_disabled'])

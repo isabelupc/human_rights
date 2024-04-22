@@ -24,7 +24,7 @@ class Model:
 
 
     def read_questions(self,f1, f2):
-        ''' Reads all the questions and separates them by level'''
+        ''' Reads all the questions and separates them by level and adds the article title and the explanation acording to the level'''
         with open(f1, 'r') as f:
             questions = json.load(f)
         with open(f2, 'r') as f:
@@ -37,15 +37,18 @@ class Model:
         for question in questions:
             if question[1] == 1:
                 question.remove(question[1])
-                question.append(articles[question[0]])
+                question.append(articles[question[0]][0])
+                question.append(articles[question[0]][1])
                 level1.append(question)
             elif question[1] == 2:
                 question.remove(question[1])
-                question.append(articles[question[0]])
+                question.append(articles[question[0]][0])
+                question.append(articles[question[0]][2])
                 level2.append(question)
             else:
                 question.remove(question[1])
-                question.append(articles[question[0]])
+                question.append(articles[question[0]][0])
+                question.append(articles[question[0]][3])
                 level3.append(question)
 
         return level1,level2,level3
@@ -168,7 +171,7 @@ with col3:
 with col4:
     col5,col6 = st.columns([3,1])
     with col5:
-        st.header(st.session_state['question'][-1])
+        st.header(st.session_state['question'][-2])
     with col6:
         st.header('You are on '+levels[st.session_state['model'].get_level()-1])
 
@@ -177,6 +180,9 @@ with col4:
 col1, col2 = st.columns([4,1])
 
 with col1 :  
+
+    with st.expander(f"Explanation {levels[st.session_state['model'].get_level()-1]} 📚"):
+                    st.write(st.session_state["question"][-1])
 
     st.subheader(st.session_state['question'][2])  
     answer = None
@@ -194,6 +200,7 @@ with col1 :
             msg = f':red[{st.session_state["question"][st.session_state["question"][1]+2]}]'
             st.subheader(msg)
             st.session_state['model'].wrong_answer()
+            
         
 
     st.button('next question',on_click=next_question,disabled=st.session_state['next_question_disabled'])

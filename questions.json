@@ -1,16 +1,128 @@
 [
 
-["01", 1, 3, "Are we all equal?", "No.", "Not everyone.", "Yes."],
-["01", 2, 1, "How should you treat others?", "With friendship.", "With superiority.", "With indifference."],
-["01", 3, 2, "Who has the ability to tell right from wrong?", "Judges.", "Everyone.", "No one."],
-
-["02", 1, 3, "In what circumstances should a man and a woman have the same rights?", "When voting.", "When buying a house.", "Always, no matter what."],
-["02", 2, 3, "Do people with different skin colors have different rights?", "Yes, but also depending on their economic level.", "No, it only depends on the religion of the person.", "No."],
-["02", 3, 1, "If you don't agree with someone's opinion...", "You should try to understand their point of view.", "You should never talk to them again.", "You should impose your opinion, since it is the right one."],
-
-["03", 1, 2, "What does the right to live mean?", "You choose when you want to be born.", "You have the right to be alive and protected.", "You choose at what time you can go to bed."],
-["03", 2, 1, "Why is it important to feel safe?", "To be able to play outside without being scared or threatened.", "So you can stay up late at night.", "So you can have more fun at school."],
-["03", 3, 1, "Who tells you how to express yourself?", "No one, you have the liberty to express yourself the way you want.", "Teachers at school.", "You learn it while you grow up from your family, friends, and teachers."]
-
-]
-
+    ["01", 1, 1, "You're a new character in a video game, and you can choose to be friends with any other character. Should you be able to be friends with anyone you choose?", "Yes, you can choose any friend.", "No, you should only choose characters like you.", "Only if they have special powers."],
+    ["01", 2, 1, "In the land of Colorful Creatures, every creature, whether blue, green, or yellow, wants to play in the Grand Jungle Gym. Should all creatures have the same chance to play?", "Yes, all creatures should play together.", "No, only the blue creatures can play because they were there first.", "Only if the creatures are the same size."],
+    ["01", 3, 2, "A wizard gives you a magical tool that can build anything. You decide to build a playground where everyone is treated equally. How should the playground treat children from different villages?", "It should have different sections for each village.", "Everyone should be welcomed and treated the same.", "Only kids from your village can use the big slide."],
+    
+    
+    ["02", 1, 3, "Suppose all the toys in the toybox started treating each other differently based on their color. What should the teddy bear say to make everyone play fairly?", "Only the red toys should be leaders.", "No toy should be left out just because of its color.", "We are all equal."],
+    ["02", 2, 1, "In a school of magic, students from all over the world come to learn spells. If a spell only works for students from one country, what should the teachers do?", "Change the spell so it works for everyone.", "Keep it as it is; it’s a very powerful spell.", "Make a new school for those who can't use the spell."],
+    ["02", 3, 2, "A group of young adventurers are chosen to save the fantasy kingdom. Should their leader be selected based on where they come from or their skills?", "Yes, where they come from is most important.", "Their skills should determine who leads.", "Only the oldest adventurer should be the leader."],
+    
+    ["03", 1, 1, "In the enchanted forest, every creature has the right to roam freely without fear. Should the friendly fox be allowed to explore the forest without worrying about danger?", "Yes, the friendly fox should explore freely and feel safe.", "No, the forest is too scary for the fox.", "Only if the fox has a powerful magic charm."],
+    ["03", 2, 2, "In the land of imagination, all the toys gather to play in the Great Toy Kingdom. Should every toy be allowed to join the fun and feel safe while playing?", "No, only the oldest toys should play.", "Yes, all toys should play together and feel safe.", "Only if they pass a difficult toy challenge."],
+    ["03", 3, 2, "The brave knight must protect the kingdom from the dragon's fire. Should the knight's armor be strong enough to keep the knight safe during battle?", "No, the knight's armor doesn't matter.", "Yes, strong armor helps keep the knight safe.", "Only if the knight has a magical shield."],
+    
+    
+    
+    ["04", 1, 2, "You are on a planet where an alien wants another alien to be his slave because he has more tentacles. This is good?", "Yes, because it has more tentacles.", "No, all aliens must be free.", "Maybe, it depends on the planet."],
+    ["04", 2, 3, "You are playing in the park and you see one group of children telling another that they have to do everything they say, like a 'slave', what do you do?", "I join in and give orders too.", "I keep playing, it's not my problem.", "I tell an adult or teacher."],
+    ["04", 3, 3, "You are a superhero and your superpower is to free people from being treated as slaves. Why do you think this power is important?", "Because then I can make everyone work for me.", "Because everyone deserves help sometimes.", "Because freedom is everyone's right and everyone deserves to be treated with respect."],
+    
+    ["05", 1, 2, "You are a knight who discovers that a dragon is being bad and pinching everyone in the kingdom. This is good?", "Yes, because it's a dragon.", "No, no one should hurt others.", "It depends on whether the habitants are good."],
+    ["05", 2, 3, "If at the playground you see that a group of friends is making another child feel bad by saying mean things, what is the right thing to do?", "Laugh and join them.", "Ignore it and continue playing.", "Tell a teacher or adult."],
+    ["05", 3, 1, "You are a superhero whose mission is to protect people from being hurt or humiliated. Why do you think your mission is so important?", "Because everyone deserves to be treated with dignity and respect.", "Because that's how I'm the most popular.", "Because sometimes people need discipline."],
+    
+    ["06", 1, 3, "You are an astronaut on a distant planet where aliens do not recognize you as a person. How should aliens treat you?", "Ignore me because I'm different.", "Just listening to other aliens.", "Treat me the same as them."],
+    ["06", 2, 1, "In the magical kingdom, a new talking animal has appeared. Some want to ignore it because it is different. What does the law say about how to treat this new habitant?", "Recognize him as a new habitant of the kingdom.", "Leave it alone because it's weird.", "Just listening to old animals."],
+    ["06", 3, 3, "You have the power to change shape. Even though you look different every day, what important right must always be respected?", "Just respect me in my original form.", "Respect me only when I'm a superhero.", "Respect me in any way because I am always a person."],
+    
+    ["07", 1, 3, "Imagine you're in a race and some runners have super speed shoes, but others don't. What should the law do to make the race fair?", "Allow only some to wear the special shoes.", "Nothing", "Make sure everyone has the same shoes."],
+    ["07", 2, 3, "At school, some students think that only boys or only girls should win prizes in science. What does the law say about who can win prizes?", "Just boys", "Just girls", "Everyone"],
+    ["07", 3, 1, "In the future, robots and humans live together. A robot and a human make the same mistake at work. According to the law, how should they be treated?", "They should be treated the same.", "Only the robot should be punished.", "Only the human should be punished."],
+    
+    ["08", 1, 3, "You are a superhero and someone tries to take your magic cape illegally. Who should you ask for help to get it back?", "A villain.", "No one, I can do it.", "A judge."],
+    ["08", 2, 1, "In a video game, a cheating player steals all your earned points. What should the game offer you to solve this?", "A fair solution by a game referee.", "More enemies.", "A new player."],
+    ["08", 3, 2, "A knight is wrongly accused of stealing a golden apple. Who should help the gentleman prove his innocence according to the law?", "The villagers.", "The judge.", "The queen."],
+    
+    ["09", 1, 2, "You're playing in the park and someone wants to send you home just because. Is it okay to be sent home for no reason?", "Yes, because they want the park for themselves.", "No, they can't send me home for no reason.", "Maybe, if they don't like me."],
+    ["09", 2, 1, "At school, a student is sent to the administration because someone said he did something wrong, without proof. What should the school do to be fair?", "Research to find evidence before deciding.", "Punish him without investigating.", "Ignore the situation."],
+    ["09", 3, 2, "If a president decides to send a person out of the country just because he or she has different opinions, what does the law say about this?", "It's okay, the president is always right.", "It's not right, the law protects against exile without valid reasons.", "It depends on the person's opinions."],
+    
+    ["10", 1, 2, "You're playing hide and seek and someone accuses you of cheating. What should you be able to do to make it fair?", "Accept that you lost the game.", "Explain your side of the story.", "Stop playing."],
+    ["10", 2, 3, "If a teacher accuses you of not doing your homework, but you did, what is fair that should happen in school?", "Punish me.", "Ignore the matter.", "Give you the opportunity to show your work."],
+    ["10", 3, 2, "A character in a book is accused of stealing magic in a fantasy kingdom. To make sure the trial is fair, what needs to happen?", "The king decides his punishment without listening to the accused.", "The accused has the opportunity to speak in his defense in front of everyone.", "The accused is sent directly to jail."],
+    
+    ["11", 1, 1, "You're playing detective and someone says you took a cookie without permission. How should you be treated until the truth is discovered?", "As if you were still innocent.", "Like you've already done something bad.", "It doesn't matter, it's just a game."],
+    ["11", 2, 2, "If the school rules change and running in the hallway is not allowed now, but you ran yesterday, can they punish you today for that?", "Yes, rules are rules.", "No, because when you ran it wasn't against the rules", "It depends on the teacher."],
+    ["11", 3, 2, "In a magical world, a wizard is accused of using a forbidden spell. Before the trial, how should the other wizards on the council treat him?", "Ignore him because he is surely guilty.", "Treat him as innocent until proven guilty in a fair trial.", "Immediately expel him from the magic council."],
+    
+    ["12", 1, 3, "Imagine you are building a secret fort in your backyard. How should others treat your private space?", "They can come in whenever they want without asking.", "They should tell everyone about your fort.", "They should knock and ask if they can come in."],
+    ["12", 2, 2, "If someone spreads a rumor at school that your little brother is a troublemaker, what is your right regarding your family’s good name?", "It’s okay because it might be true.", "Protect your family’s reputation.", "Ignore it and hope it goes away."],
+    ["12", 3, 2, "You receive letters and packages addressed only to you. What is your right regarding these personal items?", "Anyone can open them to see if they're interesting.", "They should be left unopened until you open them yourself.", "They should be shared with the whole family."],
+    
+    ["13", 1, 1, "Imagine you live in a world where you can teleport anywhere in your country. Should you be able to teleport to any city you like?", "Yes, you can teleport to any city you want.", "No, you can only go to cities your parents pick.", "You should stay in your hometown."],
+    ["13", 2, 1, "If you want to travel to a different country for a summer camp, do you have the right to go and come back home?", "Yes, you can go to the camp and return home.", "No, once you go you can't come back.", "You're not allowed to leave your country."],
+    ["13", 3, 2, "Imagine astronauts who traveled to Mars. When they want to return to Earth, what is their right regarding coming back to their home country?", "They should stay on Mars forever.", "They can decide to return whenever they wish.", "Only if the Earth's leader says they can come back."],
+    
+    ["14", 1, 1, "Imagine you're a character in a storybook where a dragon is chasing everyone. If you run to another kingdom for safety, what should you be able to do?", "Ask the other kingdom to protect you from the dragon.", "Hide and hope the dragon doesn't find you.", "Go back and face the dragon."],
+    ["14", 2, 2, "In a game where players move between different zones, if a player is being chased by a monster but also broke important game rules, should they still be able to ask for safety in a new zone?", "Yes, they should always be allowed to ask for safety.", "No, because they broke the game's rules.", "Only if they promise not to break any more rules."],
+    ["14", 3, 1, "Imagine you are part of an intergalactic council. An alien seeks refuge on your planet because they are threatened on theirs, but you find out they committed a crime there. What does the law say about their right to refuge?", "They cannot be given refuge because of the crime.", "They should be given refuge no matter what.", "They are only given refuge if the crime wasn’t serious."],
+    
+    ["15", 1, 1, "Imagine you're a part of a team of superheroes, each from different planets. Should you be able to choose which planet's superhero team you belong to?", "Yes, where feel you belong to.", "No, you must stay with your home planet.", "You can't be a superhero if you switch teams."],
+    ["15", 2, 1, "If someone is born in one country but feels a strong connection to another culture and country, should they be able to become a citizen of that new country if they want?", "Yes.", "No.", "They can only visit, not change their nationality."],
+    ["15", 3, 2, "Imagine a world where a ruler wants to take away nationality from certain people because he doesn't like them. What does the law say about taking away someone’s nationality?", "It's okay if the ruler doesn't like them.", "No-one can take away your nationality without a good reason.", "They can take it away if it makes the country safer."],
+    
+    ["16", 1, 1, "Imagine you're playing a game where everyone gets to choose a partner. Should you be able to pick anyone you want, regardless of their skin color or where they're from?", "Yes, you should be able to marry anyone you love.", "No, you can only marry someone from your own country.", "You can't get married."],
+    ["16", 2, 2, "In a story you're reading, a princess is being forced to marry a prince she doesn’t like. Is it okay for someone to make her marry him?", "Yes.", "No.", "It's okay as long as they're both from royal families."],
+    ["16", 3, 3, "In a pretend village, some people want to break up families just because they're different. What should the village leaders do?", "Nothing, it's okay to break up families sometimes.", "Only protect families if they have a lot of money.", "Protect families because they're important for everyone."],
+    
+    ["17", 1, 1, "Imagine you have a special toy that you love. Should you be able to keep it even if someone else wants it?", "Yes.", "No.", " Only if you play with it every day."],
+    ["17", 2, 3, "If you built a fort in your backyard and someone else tries to take it down, what rights do you have?", "Let them take it down; it doesn't matter.", "You can only stop them if you have a permit.", "Stop them because it’s your creation."],
+    ["17", 3, 2, "Imagine you discover a treasure map and find the treasure. Later, someone claims it’s theirs without any proof. What is your right concerning the treasure?", "You have to share it with them.", "You keep it because you found it, and there’s no proof it’s theirs.", "Give it to them if they ask nicely."],
+    
+    ["18", 1, 1, "Imagine you’re in a classroom where everyone likes superheroes, but you prefer stories about wizards. Should you be free to like what you want?", "Yes.", "No.", "You can only like wizards if your best friend does too."],
+    ["18", 2, 1, "In a town, everyone plays soccer on Saturdays, but some want to go to their place of worship instead. Should they be free to choose how to spend their Saturday?", "Yes.", "No.", "They can only go to their place of worship if it rains."],
+    ["18", 3, 1, "A character in a book believes in magic at the beginning but later finds science more fascinating. Should the character have the right to change their beliefs?", "Yes.", "No.", "Only believe in science if someone else in the book does too."],
+    
+    ["19", 1, 1, "You think the best dessert is ice cream, but your friend thinks it's cake. Should you both be able to talk about your favorite desserts?", "Yes.", "No.", "Only if you agree with your friend about cake."],
+    ["19", 2, 1, "If you create a drawing that you're really proud of, should you be able to share it online with people in other countries?", "Yes.", "No.", "Only if people in other countries like drawings."],
+    ["19", 3, 1, "There's a new rule at school about homework, and you have thoughts about it that you think could help improve things. Should you be able to write about your ideas and share them with everyone at school?", "Yes.", "No.", "Only if the teachers agree with your ideas."],
+    
+    ["20", 1, 1, "You and your friends want to have a picnic in the park to play games. Should you be able to meet and have fun together?", "Yes.", "No.", "Only if an adult joins you.."],
+    ["20", 2, 2, "If there is a club at school that all your classmates join, but you don’t want to, should you be forced to join too?", "Yes.", "No.", "Only join if you get in trouble for not joining.."],
+    ["20", 3, 3, "Your community wants to have a gathering in the town square to celebrate a local holiday. Some people say it shouldn’t be allowed. What is their right regarding peaceful assembly?", "They can only meet if everyone in the town agrees.", "They must have a permit to speak or celebrate.", "They have the right to meet peacefully, even if some disagree."],
+    
+    
+    ["21", 1, 1, "You and your friends are playing a game where you can choose a leader. Should everyone have a turn to suggest who could be the leader?", "Yes.", "No.", "Only if they have played the game before."],
+    ["21", 2, 1, "In a school election for class president, should every student be allowed to vote for their favorite candidate?", "Yes, everyone should vote.", "No, only the teachers should decide.", "Only students with good grades should vote."],
+    ["21", 3, 1, "If a new rule at school is being made, and it affects all students, should there be a secret vote to decide if everyone agrees with it?", "Yes, there should be a secret vote.", "No, the school should decide without asking.", "Only if more than half of the students want to vote."],
+    
+    ["22", 1, 2, "If you see someone who is sick and can't work, what should the society do to help?", "Do nothing; it's not their problem.", "Provide support so they can have what they need.", "Only help if they have worked for many years."],
+    ["22", 2, 3, "You are planning a community help program. Which of these should be included to ensure everyone's dignity and development?", "Only offer help on holidays.", "Provide meals only.", "Support with healthcare, education, and housing."],
+    ["22", 3, 1, "What does 'social security' mean in terms of your rights in a society?", "It means everyone gets support for health, education, and welfare if they need it.", "It's about having police and laws only.", "It means having a job and earning money."],
+    
+    ["23", 1, 1, "If everyone in your class does the same project, should everyone get the same number of stars?", "Yes.", "No, the teacher should decide based on how much she likes each project.", "Only the first ones to finish should get the most stars."],
+    ["23", 2, 1, "You and a friend do the same job at a summer fair. Should you both be paid the same if you work the same hours?", "Yes.", "No, it depends on how old you are.", "Only if you both sell the same number of tickets."],
+    ["23", 3, 1, "What should you be able to do if you are not allowed to take breaks at a summer job?", "You should be able to speak up and ask for regular breaks.", "You should quit the job.", "You should work harder to finish tasks faster and earn breaks."],
+    
+    ["24", 1, 1, "If you spend all morning studying, should you have time to play in the afternoon?", "Yes.", "No, you should only study all day.", "Only if you finished all your homework."],
+    ["24", 2, 1, "You have a lemonade stand in the summer. Should you take breaks to drink water and rest?", "Yes.", "No, you should work without stopping to sell more.", "Only if it is really hot outside."],
+    ["24", 3, 1, "If someone works all year, should they get some days off to go on vacation with their family?", "Yes.", "No, they should keep working all year.", "Only if they have worked really hard."],
+    
+    ["25", 1, 1, "If a friend at school doesn't have a snack during the playground, should there be a way to help them get one?", "Yes.", "No, they should wait until they get home.", "Only if they forgot their snack at home."],
+    ["25", 2, 1, "Your family didn't have a place to live. Should the community help find a home for you and your family?", "Yes.", "No, families should solve it on their own.", "Only if it's very cold outside."],
+    ["25", 3, 1, "Should there be special programs to help mothers and their children make sure they have enough food and health care?", "Yes.", "No, they should be treated like everyone else.", "Only if the children are very young."],
+    
+    ["26", 1, 2, "Imagine you're a pirate searching for treasure in school. Everyone wants to join the adventure. Should every little pirate be able to join for free?", "No, only the pirates with gold can join.", "Yes, every pirate should join the fun for free.", "Only the smartest pirates can join."],
+    ["26", 2, 1, "In the kingdom of the classroom, there are kids from many lands—some from the mountains, others from islands. Why is it important to learn stories and games from all these kids?", "So you can be the king or queen of knowing lots of cool stuff and making friends.", "To find out which land is the best.", "To decide who’s the coolest in the class."],
+    ["26", 3, 3, "Suppose you want to learn how to build castles or paint dragons at school. Should your parents talk to the wizard (teacher) about learning these magical skills?", "No, only the wizard decides the magic lessons.", "Yes, but only if it’s spells like math or reading.", "Yes, your parents can share ideas with the wizard about your magic lessons."],
+    
+    ["27", 1, 1, "Your town is having a big festival with music, dance, and painting. Should everyone in your class be invited to join and make an art project together?", "Yes, everyone can join and create something fun.", "No, only kids who are already good at art.", "Only if they live near the festival place."],
+    ["27", 2, 1, "You’ve drawn a beautiful picture of your town that everyone loves. Should you get to decide who can use your picture and maybe even get some rewards for it?", "Yes, you should decide and maybe get rewards.", "No, anyone can use your picture without asking.", "Only if your picture is the best one."],
+    ["27", 3, 3, "If someone in your class invents a cool new game that helps everyone learn faster, should they be able to show it at school and get credit for their invention?", "Only if the teachers think it's a good game.", "No, the school should use it without mentioning them.", "Yes, they should show it and get credit."],
+    
+    ["28", 1, 3, "If your school playground was only open to some kids, not everyone. What should be done so every kid can play?", "Only open it on special days.", "Keep it closed for most kids.", "Open the playground for all kids to enjoy."],
+    ["28", 2, 1, "In a game of castle defenders, should everyone have a chance to be a leader, or only the oldest kids?", "Everyone should have a chance to lead.", "Only the oldest kids get to lead.", "Only if they have played the game before."],
+    ["28", 3, 2, "If there’s a rule that only kids from certain neighborhoods can use the school library, what would be a fair change to make?", "Keep the rule as it is.", "Allow all kids to use the library, no matter where they live.", "Only change the rule during summer."],
+    
+    ["29", 1, 3, "Everyone in class helps to clean up after a fun art project. Why is it good for everyone to help?", "People should clean only on Fridays.", "Only the messy kids should clean.", "It helps the class stay clean and everyone can have more fun."],
+    ["29", 2, 1, "If someone in your school is being bullied, should the rules help stop this so everyone feels safe?", "Yes, the rules should help everyone feel safe.", "No, kids should handle it on their own.", "Only the teachers should deal with bullies."],
+    ["29", 3, 2, "Why is it important that our rules at school support kindness and respect for all students from different places?", "Because it’s nice to be nice.", "To make sure everyone can learn and feel respected.", "Only to win prizes for being the nicest school."],
+    
+    ["30", 1, 2, "If you built a sandcastle and someone else came and kicked it down, is that okay?", "Yes, it’s just sand.", "No, they shouldn’t destroy your sandcastle.", "Only if they rebuild it for you."],
+    ["30", 2, 3, "You have a secret club that makes sure everyone in school gets to play games fairly. What if a bigger club wanted to stop your club from making sure games are fair?", "Only if the bigger club has better games.", "Yes, the bigger club always makes the rules.", "No, they shouldn’t stop your club."],
+    ["30", 3, 2, "In a village of storytellers, everyone agrees to respect and listen to each other's stories. What if one group starts interrupting and saying only their stories can be told?", "It’s okay as long as they tell good stories.", "It’s not okay; everyone’s stories should be heard.", "Only if the group is from the village."]
+    
+    ]
+    
